@@ -15,8 +15,6 @@ export default function AuthProvider({ children, requireAuth }: AuthProviderProp
         return <Navigate to="/login" replace />;
     }
 
-    console.log(user);
-
     if (user?.auth && location.pathname === "/login") {
         return <Navigate to="/courses" replace />;
     }
